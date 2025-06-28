@@ -21,10 +21,16 @@ export default function StudentForm({ onStudentAdded }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="name" value={form.name} onChange={handleChange} placeholder="Name" required />
-      <input name="adders" value={form.adders} onChange={handleChange} placeholder="Adders" required />
-      <button type="submit">Add Student</button>
+    <form onSubmit={handleSubmit} className="mb-4">
+      <div className="mb-3">
+        <label className="form-label">Name</label>
+        <input name="name" className="form-control" value={form.name} onChange={handleChange} required />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Address</label>
+        <input name="adders" className="form-control" value={form.adders} onChange={handleChange} required />
+      </div>
+      <button type="submit" className="btn btn-primary">Add Student</button>
     </form>
   );
 }

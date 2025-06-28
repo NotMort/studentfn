@@ -16,9 +16,9 @@ export default function Home() {
     refreshStudents();
   }, []);
 
-  return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Student Management</h1>
+return (
+    <div className="container mt-4">
+      <h1 className="mb-4">Student Management</h1>
       <StudentForm onStudentAdded={refreshStudents} />
       <h2>All Students</h2>
       <StudentList students={students} />
